@@ -20,11 +20,12 @@ export class ListsComponent implements OnInit {
 
   constructor(
     private _publicdayService: PublicdaysService,
-    private _navigater       : Router
+    private _router          : Router
   ) {}
 
   ngOnInit() {
     this.getDataTable();
+    console.log('recargo')
   }
 
   getDataTable = () => {  
@@ -37,9 +38,9 @@ export class ListsComponent implements OnInit {
       });
   }
 
-  gotoElement(element){
+  gotoElement(element:string){
     console.log(element);
-    this._navigater.navigateByUrl(`../edit/${element}`);
+    this._router.navigate(['/home/edit', element]);
   }
 
 }

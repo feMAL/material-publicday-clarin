@@ -32,7 +32,7 @@ import { MatListModule } from '@angular/material/list'
     MatMenuModule,
     MatToolbarModule,    
     MatSidenavModule,
-    MatListModule
+    MatListModule 
   ],
   exports: [
     NavbarComponent,

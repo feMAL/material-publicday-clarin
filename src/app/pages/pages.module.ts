@@ -9,7 +9,7 @@ import { EditComponent } from './edit/edit.component';
 
 import { SharedModule } from '../shared/shared.module'
 import { ComponentsModule } from '../components/components.module';
-import { AppRoutingModule } from '../app-routing.module';
+//import { AppRoutingModule } from '../app-routing.module';
 
 
 import { MatSidenavModule } from '@angular/material/sidenav'; 
@@ -25,7 +25,6 @@ import { MatPaginatorModule } from '@angular/material/paginator';
   ],
   imports: [
     CommonModule,
-    AppRoutingModule,
     RouterModule,
     SharedModule,
     FlexLayoutModule,

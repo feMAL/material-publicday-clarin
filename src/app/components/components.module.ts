@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DatesComponent } from './dates/dates.component';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from '../app-routing.module';
+
+import { DatesComponent } from './dates/dates.component';
 
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatCardModule } from '@angular/material/card';
@@ -12,6 +13,7 @@ import { MatSelectModule } from '@angular/material/select'
 import { MatNativeDateModule } from '@angular/material/core';
 
 
+
 @NgModule({
   declarations: [
     DatesComponent
@@ -19,6 +21,7 @@ import { MatNativeDateModule } from '@angular/material/core';
   imports: [
     CommonModule,
     AppRoutingModule,
+    FormsModule,
     MatDatepickerModule,
     MatNativeDateModule,
     MatCardModule,

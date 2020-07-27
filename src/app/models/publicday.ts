@@ -1,5 +1,6 @@
 export class PublicDay {
     
+    public _id
     public motivo   : String
     public tipo     : String
     public dia      : Number

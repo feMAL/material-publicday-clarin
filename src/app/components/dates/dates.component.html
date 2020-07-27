@@ -4,31 +4,31 @@
           <form>
             <mat-form-field appearance="fill">
                 <mat-label>Fecha</mat-label>
-                <input matInput [matDatepicker]="picker">
+                <input matInput name="fecha" [(ngModel)]="feriadodate" [matDatepicker]="picker" disabled #fecha>
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
+                <mat-datepicker [startAt]="feriadodate" #picker></mat-datepicker>
             </mat-form-field>
             <mat-form-field>
-              <input matInput placeholder="Motivo" type="text" #motivo >
+              <input matInput placeholder="Motivo" type="text" name="motivo" [(ngModel)]="feriado.motivo" #motivo >
             </mat-form-field>
             <mat-form-field >
-              <mat-select placeholder="Tipo"  #tipo>
-                <mat-option *ngFor="let opt of tipoferiado" value="opt">{{opt}}</mat-option>
+              <mat-select placeholder="Tipo" name="tipo" [(ngModel)]="feriado.tipo" #tipo>
+                <mat-option *ngFor="let opt of tipoferiado" [value]="opt">{{opt}}</mat-option>
               </mat-select>
             </mat-form-field>
             <mat-form-field>
-              <input type="text" matInput placeholder="Identificación" #id>
+              <input type="text" matInput placeholder="Identificación" name="id" [(ngModel)]="feriado.id" #id>
             </mat-form-field>
             <mat-form-field>
-                <input type="text" matInput placeholder="Información" #info>
+                <input type="text" matInput placeholder="Información" name="info" [(ngModel)]="feriado.info" #info>
             </mat-form-field>
             <mat-form-field>
-                <input type="text" matInput placeholder="Original" #original>
+                <input type="text" matInput placeholder="Opcional" name="opcional" [(ngModel)]="feriado.opcional" #opcional>
             </mat-form-field>
             <mat-form-field>
-                <input type="text" matInput placeholder="Opcional" #opcional>
+                <input type="text" matInput placeholder="Religión" name="religion" [(ngModel)]="feriado.religion" #religion>
             </mat-form-field>
-            <button mat-flat-button color="warn" style="display: block; width: 100%;">
+            <button mat-flat-button color="warn" (click)="updateFeriado()" style="display: block; width: 100%;">
               Save
             </button>
           </form>

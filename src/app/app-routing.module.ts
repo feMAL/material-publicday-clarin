@@ -11,8 +11,8 @@ const routes: Routes = [
     component: HomeComponent,
     children: [
       { path: 'lists', component: ListsComponent },
-      { path: 'edit/:id', component: EditComponent }
-      //{ path: '**', pathMatch:'full', redirectTo: 'lists' }
+      { path: 'edit/:id', component: EditComponent,  pathMatch: 'full'},
+      { path: '**', pathMatch:'full', redirectTo: 'lists' }
     ]
   },
   { path: '**', pathMatch:'full', redirectTo: 'home/lists' }
