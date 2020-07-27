@@ -1,0 +1,14 @@
+<app-navbar (SideBar)="getSideBarEmit($event)"></app-navbar>
+
+<mat-sidenav-container>
+    <mat-drawer-container>
+        <mat-drawer mode="side" [opened]="sideBarOpen">
+            <app-sidenav></app-sidenav>
+        </mat-drawer>
+        <mat-drawer-content>
+            <router-outlet></router-outlet>
+        </mat-drawer-content>
+    </mat-drawer-container>
+</mat-sidenav-container>
+
+<app-footer></app-footer>
