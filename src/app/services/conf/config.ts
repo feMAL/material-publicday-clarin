@@ -7,7 +7,7 @@ export const API_CONFIG = {
 }
 
 export const API_PROD_CONFIG = {
-    _api : process.env.URL,
+    _api : process.env.BACK_URL,
     uriBase : '/api',
     uri : {
         publicday: '/feriado',
