@@ -5,3 +5,12 @@ export const API_CONFIG = {
         publicdays: '/feriados'
     }
 }
+
+export const API_PROD_CONFIG = {
+    _api : process.env.URL,
+    uriBase : '/api',
+    uri : {
+        publicday: '/feriado',
+        publicdays: '/feriados'
+    }
+}
