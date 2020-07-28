@@ -25,3 +25,18 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+##  Frameworks used
+
+  * Angular/Material
+  * FlexBox
+  * CSS
+  
+## File System App
+
+  * Pages      -->  Space for save all pages used by AppRoutingModule
+  * Models     -->  Space for save all model to app
+  * Services   -->  Space for save all services for app
+  * Components -->  Space for save components used by pages
+  * Shared     -->  Space for context's components of Web app
+ 
