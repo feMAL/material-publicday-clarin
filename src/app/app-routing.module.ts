@@ -18,6 +18,7 @@ const routes: Routes = [
   { path: '**', pathMatch:'full', redirectTo: 'home/lists' }
 ];
 
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
