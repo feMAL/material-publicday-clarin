@@ -8,9 +8,24 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('Validar titulo del App', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('public-days app is running!');
+    expect(page.getTitleText()).toEqual('Clarín');
+  });
+
+  it('Validar datos del Back-End', () => {
+    page.navigateTo();
+    expect(page.getPublicsDays()).toBeGreaterThan(2);
+  });
+
+  it('Acceder a Modificar a un Feriado', ()=> {
+    page.navigateTo();
+
+    let motivo = page.getSubjectFromPublicDay();
+
+    expect(page.getEditButton()).toBe('create');
+
+    expect(page.getEditButton(true)).toBe(motivo);
   });
 
   afterEach(async () => {
